@@ -46,4 +46,5 @@
       setT(0);
     }}>RESET</button
   >
+  <p>{getT().toFixed(2)}</p>
 </div>

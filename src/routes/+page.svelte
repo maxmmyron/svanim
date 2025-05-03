@@ -6,10 +6,11 @@
   let elements: App.El[] = [
     {
       initial: { x: 0, y: 0 },
-      lifetime: 5,
-      tweens: [
+      keyframes: [
         { state: { x: 0, y: 0 }, t: 0 },
         { state: { x: 100, y: 100 }, t: 2 },
+        { state: { x: 100, y: 150 }, t: 3 },
+        { state: { x: 150, y: 150 }, t: 4 },
       ],
       z: 1,
     },

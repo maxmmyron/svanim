@@ -10,10 +10,14 @@ declare global {
 
 		interface El {
 			z: number;
-			lifetime: number;
 			initial: State;
 			// matrix: App.TransformMat;
-			tweens: Tween[];
+			keyframes: Keyframe[];
+		}
+
+		interface Keyframe {
+			state: State;
+			t: number;
 		}
 
 		interface El {
@@ -23,11 +27,6 @@ declare global {
 		interface State {
 			x: number;
 			y: number;
-		}
-
-		interface Tween {
-			state: State;
-			t: number;
 		}
 
 		type TransformMat = {};
