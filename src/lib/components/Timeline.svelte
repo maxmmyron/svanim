@@ -2,12 +2,13 @@
   import { getT, setT } from "$lib/state.svelte";
   import { onMount } from "svelte";
 
-  interface _P {
+  let {
+    onplay = $bindable(),
+    onpause = $bindable(),
+  }: {
     onplay?: (t: number) => void;
     onpause?: (t: number) => void;
-  }
-
-  let { onplay = $bindable(), onpause = $bindable() }: _P = $props();
+  } = $props();
 
   let timeline: HTMLDivElement;
 

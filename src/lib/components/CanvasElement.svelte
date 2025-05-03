@@ -1,11 +1,7 @@
 <script lang="ts">
   import { getT } from "$lib/state.svelte";
 
-  interface _P {
-    el: App.El;
-  }
-
-  let { el }: _P = $props();
+  let { el }: { el: App.El } = $props();
 
   const lerp = (k: keyof App.State, t: number) => {
     if (el.keyframes.length === 0) return el.initial[k];
